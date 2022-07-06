@@ -1,5 +1,5 @@
 # student management
 
-##Backend JavaSpring
+## Backend JavaSpring
 
-##Frontend React
+## Frontend React
