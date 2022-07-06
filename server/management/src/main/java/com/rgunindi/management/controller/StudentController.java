@@ -11,14 +11,16 @@ import java.util.List;
 //@RequestMapping(method = RequestMethod.POST)
 @RestController
 @RequestMapping("/student")
+@CrossOrigin
 public class StudentController {
     @Autowired
     private IStudentService iStudentService;
 
     @PostMapping("/add")
-    public String add(@RequestBody Student student){
+    public List<Student> add(@RequestBody Student student){
         iStudentService.saveStudent(student);
-        return "New student is added";
+
+        return iStudentService.getAllStudent();
     }
 
     @GetMapping("/getAll")
